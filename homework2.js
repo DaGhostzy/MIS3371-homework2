@@ -7,7 +7,7 @@ Description: Homework 2 JavaScript
 */
 
 /*
-    MISSO resources were used as a reference and guideline for this project.
+    MISSO resources were used as a framework reference and guideline for this project.
     All additional insights, modifications, and enhancements are my own work.
     Extra explanations and additions have been included in the comments for clarity.
     For full access to the MISSO resources, visit:
