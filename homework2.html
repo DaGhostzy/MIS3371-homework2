@@ -64,12 +64,12 @@
 
                 <!-- Name -->
                 <tr>
-                    <td><label for="fname">First Name:*</label></td>
+                    <td><label for="FirstName">First Name:*</label></td>
                     <td>
                         <input
                             type="text"
-                            name="fname"
-                            id="fname"
+                            name="FirstName"
+                            id="FirstNameame"
                             minlength="1"
                             maxlength="30"
                             required title="Letters, apostrophes, and dashes only"
@@ -79,7 +79,7 @@
                         />
                         <span 
                             class="error" 
-                            id="fname-error"
+                            id="FirstName-error"
                         >
                         </span>
                     <td>
@@ -89,21 +89,21 @@
                           <!-- onblur reference from w3school: https://www.w3schools.com/jsref/event_onblur.asp -->
 
                 <tr>
-                    <td><label for="middle">Middle initial:</label></td>
+                    <td><label for="MiddleInitial">Middle initial:</label></td>
                     <td>
                         <input
                             type="text"
-                            name="middle"
-                            id="middle"
+                            name="MiddleInitial"
+                            id="MiddleInitial"
                             maxlength="1"
-                            required title="Letter only"
+                            required title="Single letter only"
                             required pattern="[a-zA-Z']{0,1}"
                             required onblur="validateMiddle()"
                             required placeholder="H"
                         />
                         <span 
                             class="error" 
-                            id="middle-error"
+                            id="MiddleInitial-error"
                         >
                         </span>
                     <td>
@@ -113,12 +113,12 @@
                           <!-- onblur reference from w3school: https://www.w3schools.com/jsref/event_onblur.asp -->
 
                 <tr>
-                    <td><label for="lname">Last Name:*</label></td>
+                    <td><label for="LastName">Last Name:*</label></td>
                     <td>
                         <input
                             type="text"
-                            name="lname"
-                            id="lname"
+                            name="LastName"
+                            id="LastName"
                             minlength="1"
                             maxlength="30"
                             required title="Letters, apostrophes, numbers 2 to 5, ie, the 3rd, and dashes only"
@@ -128,7 +128,7 @@
                         />
                         <span 
                             class="error" 
-                            id="lname-error"
+                            id="LastName-error"
                         >
                         </span>
                     <td>
@@ -151,7 +151,11 @@
                 <tr>
                     <td><label for="dob">Date of Birth:*</label></td>
                     <td>
-                        <input type="date" id="dob" name="dob">
+                        <input 
+                            type="date"
+                            id="dob" 
+                            name="dob"
+                        >
                     </td>
                 </tr>
 
@@ -164,8 +168,9 @@
                             minlength="9"
                             maxlength="11"
                             name="ssn"
-                            required title="Numbers only"
-                            required placeholder="123-45-6789"
+                            id="ssn"
+                            required title="Numbers and dashes only"
+                            required placeholder="123-456-789"
                             required onblur="validateSsn()"
                         />
                         <span 
@@ -184,21 +189,21 @@
 
                 <!-- Address 1 -->
                 <tr>
-                    <td><label for="address1">Address Line 1:*</label></td>
+                    <td><label for="Address1">Address Line 1:*</label></td>
                     <td>
                         <input
                             type="text"
-                            name="address1"
-                            id="address1"
+                            name="Address1"
+                            id="Address1"
                             minlength="2"
                             maxlength="30"
                             required title="Please enter address"
-                            required placeholder="5608 Eldridge Dr"
+                            required placeholder="5608 Coldridge Dr"
                             required onblur="validateAddress1()"
                         />
                         <span 
                             class="error" 
-                            id="address1-error"
+                            id="Address1-error"
                         >
                         </span>
                     </td>
@@ -208,21 +213,21 @@
 
                 <!-- Address 2 -->
                 <tr>
-                    <td><label for="address2">Address Line 2:</label></td>
+                    <td><label for="Address2">Address Line 2:</label></td>
                     <td>
                         <input
                             type="text"
-                            name="address2"
-                            id="address2"
+                            name="Address2"
+                            id="Address2"
                             minlength="2"
                             maxlength="30"
-                            required title="Please enter address"
-                            required placeholder="Coldridge Apt"
+                            required title="Apt section group, Apt #, etc."
+                            required placeholder="Section E, Apt 111"
                             required onblur="validateAddress2()"
                         />
                         <span 
                             class="error" 
-                            id="address2-error"
+                            id="Address2-error"
                         >
                         </span>
                     </td>
@@ -232,12 +237,13 @@
 
                 <!-- City -->
                 <tr>
-                    <td><label for="city">City:*</label></td>
+                    <td><label for="City">City:*</label></td>
                     <td>
                         <input
                             type="text"
-                            name="city"
-                            id="city"
+                            name="City"
+                            id="City"
+                            minlength="2"
                             maxlength="30"
                             required title="Please enter city"
                             required placeholder="Houston"
@@ -309,22 +315,22 @@
 
                 <!-- Zip Code -->
                 <tr>
-                    <td><label for "zipcode"> Zip:* </label></td>
+                    <td><label for "Zipcode"> Zip:* </label></td>
                     <td>
                         <input
                             type="text"
-                            name="zipcode"
-                            id="zipcode"
+                            name="Zipcode"
+                            id="Zipcode"
                             minlength="5"
                             maxlength="10"
-                            required title="Numbers and a dash only"
+                            required title="Numbers only (1 dash if necessary)"
                             required placeholder="77050"
                             required pattern="^\d{5}(-\d{4})?$"
                             required onblur="validateZipcode()"
                         />
                         <span 
                             class="error" 
-                            id="zipcode-error"
+                            id="Zipcode-error"
                         >
                         </span>
                     </td>
@@ -335,22 +341,22 @@
 
                 <!-- Phone Number -->
                 <tr>
-                    <td><label for "phone number"> Phone #:* </label></td>
+                    <td><label for "PhoneNumber"> Phone #:* </label></td>
                     <td>
                         <input
                             type="text"
-                            name="phonenumber"
-                            id="phonenumber"
-                            minlength="10"
-                            maxlength="10"
-                            required title="Please enter phone # without dashes"
+                            name="PhoneNumber"
+                            id="PhoneNumber"
+                            minlength="12"
+                            maxlength="12"
+                            required title="Please enter phone # including dashes"
                             required placeholder="713-456-7892"
                             requird pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
-                            required onblur="validatePhonenumber()"
+                            required onblur="validatePhoneNumber()"
                         />
                         <span 
                             class="error" 
-                            id="phonenumber-error"
+                            id="PhoneNumber-error"
                         >
                         </span>
                     </td>
@@ -361,12 +367,12 @@
 
                 <!-- Email -->
                 <tr>
-                    <td><label for "email"> Email:* </label></td>
+                    <td><label for "Email"> Email:* </label></td>
                     <td>
                         <input
                             type="text"
-                            name="email"
-                            id="email"
+                            name="Email"
+                            id="Email"
                             maxlength="40"
                             required title="Please enter email"
                             required placeholder="name@domain.tld"
@@ -375,7 +381,7 @@
                         />
                         <span 
                             class="error" 
-                            id="email-error"
+                            id="Email-error"
                         >
                         </span>
                     </td>
@@ -390,7 +396,7 @@
 
                 <!-- Medical History -->
                 <tr>
-                    <td><label for="history">Have you ever had:</label></td>
+                    <td><label for="Medhistory">Have you ever had:</label></td>
                     <td>
                         <input type="checkbox" id="optional value="Chicken Pox"> Chicken Pox
                         <input type="checkbox" id="optional value="Measles"> Measles
@@ -402,21 +408,21 @@
 
                 <!-- insurance-->
                 <tr>
-                    <td class="td1"><label for="insur"> Do you have Insurance?:*</label></td>
+                    <td class="td1"><label for="Insur"> Do you have Insurance?:*</label></td>
                     <td>
                         <input
                             type="radio"
-                            id="insur1"
-                            name"insur"
+                            id="Insur1"
+                            name="Insur"
                             value="Yes"
                         />
                         Yes
 
                         <input
                             type="radio"
-                            id="insur2"
-                            name="insur"
-                            value="no"
+                            id="Insur2"
+                            name="Insur"
+                            value="No"
                         />
                         No
 
@@ -424,20 +430,20 @@
                 </tr>
 
                 <!-- vacination-->
-                <td class="td1"><label for="vax"> Are you Vaccinated:*</label></td>
+                <td class="td1"><label for="Vax"> Are you Vaccinated:*</label></td>
                     <td>
                         <input
                             type="radio"
-                            id="vax1"
-                            name"vax"
+                            id="Vax1"
+                            name="Vax"
                             value="Yes"
                         />
                         Yes
 
                         <input
                             type="radio"
-                            id="vax2"
-                            name="vax"
+                            id="Vax2"
+                            name="Vax"
                             value="no"
                         />
                         No
@@ -447,11 +453,11 @@
 
                 <!-- Additional notes -->
                 <tr>
-                    <td><label for="notes">Current Symptoms and/or Additional Notes:</label></td>
+                    <td><label for="Notes">Current Symptoms and/or Additional Notes:</label></td>
                     <td>
                         <textarea
-                            id="notes"
-                            name="notes"
+                            id="Notes"
+                            name="Notes"
                             rows="3"
                             cols="50"
                             required placeholder="Enter text here"></textarea>
@@ -460,17 +466,17 @@
 
                 <!-- Pain Level -->
                 <tr>
-                    <td class="td1"><label for="range">What is your pain level?<br/>(Rate from 1 to 10)</label></td>
+                    <td class="td1"><label for="Range">What is your pain level?<br/>(Rate from 1 to 10)</label></td>
                     <td>
                         <input
-                            type="range"
-                            name="range"
-                            id="range"
+                            type="Range"
+                            name="Range"
+                            id="Range"
                             min="1"
                             max="10"
                             value="0"
                         />
-                        <span id="range-slider"></span>
+                        <span id="Range-slider"></span>
                     </td>
                 </tr>
 
@@ -486,6 +492,7 @@
                             type="text"
                             name="usid"
                             id="usid"
+                            minlength="5"
                             maxlength="20"
                             required title="Create a user ID different from email:"
                             required placeholder="Coogs_123!"
@@ -533,18 +540,69 @@
                             minlength="10"
                             maxlength="12"
                             required title="Confirm Password"
-                            required placeholder="Your password"
+                            required placeholder="Confirm password"
+                            required onblur="confirmpsword()"
+                            oninput="confirmpsword()"
+                            onfocus="confirmpsword()"
                         />
+                        <span 
+                            class="error" 
+                            id="cpsword-error"
+                        >
+                        </span>
                     </td>
                 </tr>
 
-                <!-- Submit -->
+                          <!-- pattern reference from w3school: https://www.w3schools.com/TAGs/att_pattern.asp and MISSO resources-->
+                          <!-- onblur reference from w3school: https://www.w3schools.com/jsref/event_onblur.asp -->
+                          <!-- oninput reference from w3school: https://www.w3schools.com/Jsref/event_oninput.asp and MISSO resources-->
+                          <!-- onfocus reference from w3school: https://www.w3schools.com/jsref/event_onfocus.asp and MISSO resources-->
+
+                <!-- Submit, reset, and review buttons-->
                 <tr>
                     <td colspan="4">
                         <center>
-                            <input type="submit" name="submit">
-                            <input type="reset" name="reset">
+                            <!-- reset button-->
+                            <input
+                                type="reset"
+                                name="reset"
+                                id="reset"
+                            >
+                            <!-- submit button-->
+                            <input 
+                                type="submit"
+                                name="submit"
+                                id="submit"
+                            >
+                            <!-- review button-->
+                            <input
+                                type="button"
+                                name="review"
+                                id="review"
+                                value="Review"
+                                onclick="reviewInput()"
+                            >
+                                    <!-- review button reference MISSO resources-->
+
+        <!-- password dynamic messages indicators to be displayed -->
+        <div class="psword-message">
+            <span id="msg1"></span> <br/>
+            <span id="msg2"></span> <br/>
+            <span id="msg3"></span> <br/>
+            <span id="msg4"></span> <br/>
+        </div>
+                                    <!-- password dynamic messages indicators to be displayed from MISSO resources -->
+
+                        <!-- displays data from inputed data from the user using JavaScript -->
+                        <center>
+                            <p>
+                                <
+                                  id="showInput"
+                                >
+                            </p>
                         </center>
+                                    <!-- display of input data from MISSO resources -->
+                            
                     </td>
                 </tr>
             </table>
