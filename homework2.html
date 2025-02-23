@@ -70,12 +70,17 @@
                             type="text"
                             name="fname"
                             id="fname"
+                            minlength="1"
                             maxlength="30"
-                            required title="please enter your first name"
+                            required title="Letters, apostrophes, and dashes only"
+                            required pattern="[a-zA-Z']{1-30}"
                             required placeholder="Michael"
+ 
                         />
                     <td>
                 <tr>
+
+                          <!-- pattern from w3spaces patterns -->
 
                 <tr>
                     <td><label for="middle">Middle initial:</label></td>
