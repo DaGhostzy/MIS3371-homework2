@@ -9,7 +9,7 @@
 -->
 
 <!--
-    MISSO resources were used as a reference and guideline for this project.
+    MISSO resources were used as a framework reference and guideline for this project.
     All additional insights, modifications, and enhancements are my own work.
     Extra explanations and additions have been included in the comments for clarity.
     For full access to the MISSO resources, visit:
@@ -74,13 +74,19 @@
                             maxlength="30"
                             required title="Letters, apostrophes, and dashes only"
                             required pattern="[a-zA-Z']{1-30}"
+                            required onblur="validateFname()"
                             required placeholder="Michael"
- 
                         />
+                        <span 
+                            class="error" 
+                            id="fname-error"
+                        >
+                        </span>
                     <td>
                 <tr>
 
-                          <!-- pattern from w3spaces patterns -->
+                          <!-- pattern reference from w3school: https://www.w3schools.com/TAGs/att_pattern.asp -->
+                          <!-- onblur reference from w3school: https://www.w3schools.com/jsref/event_onblur.asp -->
 
                 <tr>
                     <td><label for="middle">Middle initial:</label></td>
@@ -90,11 +96,21 @@
                             name="middle"
                             id="middle"
                             maxlength="1"
-                            required title="please enter your middle initial"
+                            required title="Letter only"
+                            required pattern="[a-zA-Z']{0,1}"
+                            required onblur="validateMiddle()"
                             required placeholder="H"
                         />
+                        <span 
+                            class="error" 
+                            id="middle-error"
+                        >
+                        </span>
                     <td>
                 <tr>
+
+                          <!-- pattern reference from w3school: https://www.w3schools.com/TAGs/att_pattern.asp -->
+                          <!-- onblur reference from w3school: https://www.w3schools.com/jsref/event_onblur.asp -->
 
                 <tr>
                     <td><label for="lname">Last Name:*</label></td>
@@ -103,13 +119,24 @@
                             type="text"
                             name="lname"
                             id="lname"
+                            minlength="1"
                             maxlength="30"
-                            required title="please enter your last name"
+                            required title="Letters, apostrophes, numbers 2 to 5, ie, the 3rd, and dashes only"
+                            required pattern="[a-zA-Z']{1,30}"
+                            required onblur="validateLname()"
                             required placeholder="Tran"
                         />
+                        <span 
+                            class="error" 
+                            id="lname-error"
+                        >
+                        </span>
                     <td>
                 <tr>
 
+                          <!-- pattern reference from w3school: https://www.w3schools.com/TAGs/att_pattern.asp -->
+                          <!-- onblur reference from w3school: https://www.w3schools.com/jsref/event_onblur.asp -->
+                    
                 <!-- Gender -->
                 <tr>
                     <td><label for="pgender">Gender:*</label></td>
@@ -137,11 +164,19 @@
                             minlength="9"
                             maxlength="11"
                             name="ssn"
-                            required title="Please enter social security number"
+                            required title="Numbers only"
                             required placeholder="123-45-6789"
+                            required onblur="validateSsn()"
                         />
+                        <span 
+                            class="error" 
+                            id="ssn-error"
+                        >
+                        </span>
                     </td>
                 </tr>
+
+                          <!-- onblur reference from w3school: https://www.w3schools.com/jsref/event_onblur.asp -->
 
                 <tr>
                     <th colspan=4>Patient Information</th>
@@ -155,12 +190,21 @@
                             type="text"
                             name="address1"
                             id="address1"
+                            minlength="2"
                             maxlength="30"
                             required title="Please enter address"
-                            required placeholder="508 Eldridge Dr"
+                            required placeholder="5608 Eldridge Dr"
+                            required onblur="validateAddress1()"
                         />
+                        <span 
+                            class="error" 
+                            id="address1-error"
+                        >
+                        </span>
                     </td>
                 </tr>
+
+                          <!-- onblur reference from w3school: https://www.w3schools.com/jsref/event_onblur.asp -->
 
                 <!-- Address 2 -->
                 <tr>
@@ -170,12 +214,21 @@
                             type="text"
                             name="address2"
                             id="address2"
+                            minlength="2"
                             maxlength="30"
                             required title="Please enter address"
                             required placeholder="Coldridge Apt"
+                            required onblur="validateAddress2()"
                         />
+                        <span 
+                            class="error" 
+                            id="address2-error"
+                        >
+                        </span>
                     </td>
                 </tr>
+
+                           <!-- onblur reference from w3school: https://www.w3schools.com/jsref/event_onblur.asp -->
 
                 <!-- City -->
                 <tr>
@@ -261,13 +314,24 @@
                         <input
                             type="text"
                             name="zipcode"
+                            id="zipcode"
                             minlength="5"
                             maxlength="10"
-                            required title="Please enter zipcode"
+                            required title="Numbers and a dash only"
                             required placeholder="77050"
+                            required pattern="^\d{5}(-\d{4})?$"
+                            required onblur="validateZipcode()"
                         />
+                        <span 
+                            class="error" 
+                            id="zipcode-error"
+                        >
+                        </span>
                     </td>
                 </tr>
+
+                          <!-- pattern reference from w3school: https://www.w3schools.com/TAGs/att_pattern.asp and MISSO resources-->
+                          <!-- onblur reference from w3school: https://www.w3schools.com/jsref/event_onblur.asp -->
 
                 <!-- Phone Number -->
                 <tr>
@@ -275,14 +339,25 @@
                     <td>
                         <input
                             type="text"
-                            name="phone number"
+                            name="phonenumber"
+                            id="phonenumber"
                             minlength="10"
                             maxlength="10"
                             required title="Please enter phone # without dashes"
                             required placeholder="713-456-7892"
+                            requird pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                            required onblur="validatePhonenumber()"
                         />
+                        <span 
+                            class="error" 
+                            id="phonenumber-error"
+                        >
+                        </span>
                     </td>
                 </tr>
+
+                          <!-- pattern reference from w3school: https://www.w3schools.com/TAGs/att_pattern.asp and MISSO resources-->
+                          <!-- onblur reference from w3school: https://www.w3schools.com/jsref/event_onblur.asp -->
 
                 <!-- Email -->
                 <tr>
@@ -291,12 +366,23 @@
                         <input
                             type="text"
                             name="email"
+                            id="email"
                             maxlength="40"
                             required title="Please enter email"
                             required placeholder="name@domain.tld"
+                            required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,20}$"
+                            required onblur="validateEmail()"
                         />
+                        <span 
+                            class="error" 
+                            id="email-error"
+                        >
+                        </span>
                     </td>
                 </tr>
+
+                          <!-- pattern reference from w3school: https://www.w3schools.com/TAGs/att_pattern.asp and MISSO resources-->
+                          <!-- onblur reference from w3school: https://www.w3schools.com/jsref/event_onblur.asp -->
 
                 <tr>
                     <th colspan=4>Medical History</th>
@@ -415,13 +501,26 @@
                             type="password"
                             name="psword"
                             id="psword"
-                            minlength="10"
-                            maxlength="12"
+                            minlength="8"
+                            maxlength="30"
                             required title="Password"
                             required placeholder="Your password"
+                            required onblur="validatepsword()"
+                            oninput="validadepsword()"
+                            onfocus="validatepsword()"
                         />
+                        <span 
+                            class="error" 
+                            id="psword-error"
+                        >
+                        </span>
                     </td>
                 </tr>
+
+                          <!-- pattern reference from w3school: https://www.w3schools.com/TAGs/att_pattern.asp and MISSO resources-->
+                          <!-- onblur reference from w3school: https://www.w3schools.com/jsref/event_onblur.asp -->
+                          <!-- oninput reference from w3school: https://www.w3schools.com/Jsref/event_oninput.asp and MISSO resources-->
+                          <!-- onfocus reference from w3school: https://www.w3schools.com/jsref/event_onfocus.asp and MISSO resources-->
 
                 <!-- Confirm Password -->
                 <tr>
