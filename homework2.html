@@ -84,7 +84,7 @@
                             maxlength="30"
                             required title="Letters, apostrophes, and dashes only"
                             required pattern="[a-zA-Z']{1,30}"
-                            required onblur="validateFname()"
+                            required onblur="validateFirstName()"
                             required placeholder="Michael"
                         />
                         <span 
@@ -133,7 +133,7 @@
                             maxlength="30"
                             required title="Letters, apostrophes, numbers 2 to 5, ie, the 3rd, and dashes only"
                             required pattern="[a-zA-Z']{1,30}"
-                            required onblur="validateLname()"
+                            required onblur="validateLastname()"
                             required placeholder="Tran"
                         />
                         <span 
@@ -151,9 +151,9 @@
                 <tr>
                     <td><label for="pgender">Gender:*</label></td>
                     <td>
-                        <input type="radio" id="g1" name="pgender" value="Male"> Male
-                        <input type="radio" id="g2" name="pgender" value="Female"> Female
-                        <input type="radio" id="g3" name="pgender" value="Other"> Other
+                        <input type="radio" id="g1" name="pgender" value="Male"/> Male
+                        <input type="radio" id="g2" name="pgender" value="Female"/> Female
+                        <input type="radio" id="g3" name="pgender" value="Other"/> Other
                     </td>
                 </tr>
 
@@ -171,7 +171,7 @@
 
                 <!-- Social Security Number -->
                 <tr>
-                    <td><label for "ssn"> SSN:* </td>
+                    <td><label for="ssn"> SSN:* </td>
                     <td>
                         <input
                             type="password"
@@ -319,13 +319,13 @@
                             <option value="WV">West Virginia</option>
                             <option value="WI">Wisconsin</option>
                             <option value="WY">Wyoming</option>
-                        </select>
+                        </select required>
                     </td>
                 </tr>
 
                 <!-- Zip Code -->
                 <tr>
-                    <td><label for= "Zipcode"> Zip:* </label></td>
+                    <td><label for="Zipcode"> Zip:* </label></td>
                     <td>
                         <input
                             type="text"
@@ -351,7 +351,7 @@
 
                 <!-- Phone Number -->
                 <tr>
-                    <td><label for "PhoneNumber"> Phone #:* </label></td>
+                    <td><label for="PhoneNumber"> Phone #:* </label></td>
                     <td>
                         <input
                             type="text"
@@ -377,7 +377,7 @@
 
                 <!-- Email -->
                 <tr>
-                    <td><label for "Email"> Email:* </label></td>
+                    <td><label for="Email"> Email:* </label></td>
                     <td>
                         <input
                             type="text"
@@ -497,7 +497,7 @@
 
                 <!-- User ID -->
                 <tr>
-                    <td class=<"td1"><label for="usid">User ID:*</label></td>
+                    <td class="td1"><label for="usid">User ID:*</label></td>
                     <td>
                         <input
                             type="text"
