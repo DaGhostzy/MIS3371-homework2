@@ -325,7 +325,7 @@
 
                 <!-- Zip Code -->
                 <tr>
-                    <td><label for "Zipcode"> Zip:* </label></td>
+                    <td><label for= "Zipcode"> Zip:* </label></td>
                     <td>
                         <input
                             type="text"
@@ -361,7 +361,7 @@
                             maxlength="12"
                             required title="Please enter phone # including dashes"
                             required placeholder="713-456-7892"
-                            requird pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                            required pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
                             required onblur="validatePhoneNumber()"
                         />
                         <span 
@@ -408,11 +408,11 @@
                 <tr>
                     <td><label for="Medhistory">Have you ever had:</label></td>
                     <td>
-                        <input type="checkbox" id="optional value="Chicken Pox"> Chicken Pox
-                        <input type="checkbox" id="optional value="Measles"> Measles
-                        <input type="checkbox" id="optional value="Covid-19"> Covid-19
-                        <input type="checkbox" id="optional value="Small Pox"> Small Pox
-                        <input type="checkbox" id="optional value="Tetanus"> Tetanus
+                        <input type="checkbox" id="optional" value="Chicken Pox"> Chicken Pox
+                        <input type="checkbox" id="optional" value="Measles"> Measles
+                        <input type="checkbox" id="optional" value="Covid-19"> Covid-19
+                        <input type="checkbox" id="optional" value="Small Pox"> Small Pox
+                        <input type="checkbox" id="optional" value="Tetanus"> Tetanus
                     </td>
                 </tr>
 
@@ -440,7 +440,8 @@
                 </tr>
 
                 <!-- vacination-->
-                <td class="td1"><label for="Vax"> Are you Vaccinated:*</label></td>
+                <tr>
+                    <td class="td1"><label for="Vax"> Are you Vaccinated:*</label></td>
                     <td>
                         <input
                             type="radio"
