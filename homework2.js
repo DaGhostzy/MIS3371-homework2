@@ -46,6 +46,7 @@ function validateDob()
        dob.value = "";
        return false;
      }
+  
   else if (date < new Date(maxDate))
      {
        document.getElementById("dob-error").innerHTML =
@@ -53,16 +54,62 @@ function validateDob()
        dob.value = "";
        return false;
      }
+  
   else
-  {
-    document.getElementById("dob-error").innerHTML = "";
-    return true;
-  }
-}
+     {
+       document.getElementById("dob-error").innerHTML = "";
+       return true;
+     }
+ }
 // structure guidelines derived from MISSO resources
 
 // validation for social security number
 function validateSsn()
  {
    const ssn = document.getElementById("ssn").value;
-  
+   const ssnR = /^[0-9]{3}-?[0-9]{2}-?[0-9]{4}$/;
+
+   if (!ssnR.test(ssn))
+     {
+       document.getElementById("ssn-error").innerHTML = 
+       "Enter a valid Social Security Number";
+       return false;
+     }
+
+   else
+   {
+     document.getElementById("ssn-error").innerHTML = "";
+     return true;
+   }
+ }
+// structure guidelines derived from MISSO resources
+
+// validation for ZIP code
+function validateZipcode()
+ {
+   const zipInput = document.getElementById("Zipcode");
+   let zip = zipInput.value.replace(/[^\d-]/g, "");
+
+   if (!zip)
+     {
+       document.getElementById("Zipcode-error").innerHTML = 
+       "Enter a Zip Code";
+       return false;
+     }
+
+   if (zip.length > 5)
+     {
+       zip = zip.slice(0,5) + "-" + zip.slice(5,9);
+     }
+   else
+     {
+       zip = zip.slice(0,5);
+     }
+
+      zipInput.value = zip;
+      document.getElementById("Zipcode-error").innerHTML = "";
+      return true;
+   }
+ }
+// structure guidelines derived from MISSO resources
+
