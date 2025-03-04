@@ -113,3 +113,5 @@ function validateZipcode()
  }
 // structure guidelines derived from MISSO resources
 
+//validate email
+var emailR= 
