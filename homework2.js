@@ -296,7 +296,7 @@ function validateConfirmPsword()
 // Review Button
 function reviewInput()
 {
-   var formcontent = document.getElementById("signup");
+   var formcontent = document.getElementById("patientSignup");
    var formoutput = "<table class= 'output'><tr><th colspan = '3'> Review your Information:</th></tr>";
    for (let i = 0; i < formcontent.length; i++)
      {
