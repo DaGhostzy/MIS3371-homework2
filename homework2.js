@@ -297,7 +297,7 @@ function validateConfirmPsword()
 function reviewInput()
 {
    var formcontent = document.getElementById("signup");
-   var formoutput = "<table class= 'output'><th colspan = '3'> Review your Information:</th></tr>;
+   var formoutput = "<table class= 'output'><th colspan = '3'> Review your Information:</th></tr>";
    for (let i = 0; i < formcontent.length; i++)
      {
        if (formcontent.elements[i].value !== "")
