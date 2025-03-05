@@ -297,7 +297,7 @@ function validateConfirmPsword()
 function reviewInput()
 {
    var formcontent = document.getElementById("signup");
-   var formoutput = "<table class= 'output'><th colspan = '3'> Review your Information:</th></tr>";
+   var formoutput = "<table class= 'output'><tr><th colspan = '3'> Review your Information:</th></tr>";
    for (let i = 0; i < formcontent.length; i++)
      {
        if (formcontent.elements[i].value !== "")
@@ -307,13 +307,13 @@ function reviewInput()
             case "checkbox":
              if(formcontent.elements[i].checked)
              {
-               formoutput += `<tr><td align= 'right'>${formcontent.elements[i].name}</td<td>&#x2713;</td></tr>`;
+               formoutput += `<tr><td align= 'right'>${formcontent.elements[i].name}</td><td>&#x2713;</td></tr>`;
              }
              break;
            case "radio":
              if (formcontent.elements[i].checked)
              {
-               formoutput += `<tr><td align= 'right'>${formcontent.elements[i].name}</td><td${formcontent.elements[i].value}</td></tr>`;
+               formoutput += `<tr><td align= 'right'>${formcontent.elements[i].name}</td><td>${formcontent.elements[i].value}</td></tr>`;
              }
              break;
            default:
@@ -321,7 +321,7 @@ function reviewInput()
            }
         }  
      }
-     formoutput =+ "</table>";
+     formoutput += "</table>";
      document.getElementById("showInput").innerHTML = formoutput;
 }
 // some of "for loop" statement derived from MISSO resources
