@@ -129,3 +129,60 @@ p
     font-family: "optima", 'Times New Roman', Times, serif;
     font-weight: normal;
 }
+
+/* error messages style */
+.error
+{
+    color: ;
+    font-size: ;
+    font-family: ;
+    font-weight: ;
+}
+
+/* password validation message style */
+.psword-message
+{
+    color: ;
+    text-align: right;
+    font-weight: ;
+    font-family: ;
+    position: relative;
+    left: 100%;
+    background: transparent;
+    padding: 15%;
+    border-spacing: 4%;
+    border-radius: 25%;
+}
+/* w3schools message container- https://www.w3schools.com/w3css/w3css_containers.asp */
+
+/* review button style */
+#review
+{
+    margin-top: 8%;
+}
+
+/* output table style */
+table.output,
+tr.output,
+td.output
+{
+    color: ;
+    width: 300%;
+    background-color: ;
+    padding: 15%;
+    border-spacing: 4%;
+    border-radius: 25%;
+}
+
+/* style for individual cells */
+td.output
+{
+    width: 300%;
+    background-color: ;
+    padding: 15%;
+    border-spacing: 4%;
+}
+
+
+
+
