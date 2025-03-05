@@ -39,7 +39,7 @@ function validateDob()
    let date = new Date(dob.value);
    let maxDate = new Date().setFullYear(new Date().getFullYear() - 120);
 
-  if (date > new Date()
+  if (date > new Date())
      {
        document.getElementById("dob-error").innerHTML = 
        "The date can NOT be in the future";
@@ -114,4 +114,84 @@ function validateZipcode()
 // structure guidelines derived from MISSO resources
 
 //validate email
-var emailR= 
+function validateEmail()
+ {
+   var email = document.getElementById("Email").value;
+   var emailR= /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+
+  if (email.length == 0) 
+     {
+        document.getElementById("Email-error").innerHTML = 
+        "Email can't be blank";
+        return false;
+     }
+  
+   if (!emailR.test(email))
+     {
+       document.getElementById("Email-error").innerHTML = 
+       "Enter a valid email address";
+       return false;
+     }
+   else
+   {
+     document.getElementById("Email-error").innerHTML = "";
+     return true;
+   }
+ }
+// regex pattern for email derived from MISSO resources
+
+//validate and format phone number
+//format phone number
+function formatPhoneNumber()
+ {
+   var phoneInput = document.getElementById("PhoneNumber");
+   var phoneValue = phoneInput.value.replace(/\D/g, "");
+
+  if (phoneValue.length <=3) 
+     {
+        phoneInput.value = phoneValue;
+     }
+   
+  else if (phoneValue.length <6)
+     {
+       phoneInput.value = phoneValue.slice(0,3) + "-" + phoneValue.slice(3);
+     }
+
+   else
+   {
+     phoneInput.value = phoneValue.slice(0,3) + "-" + phoneValue.slice(3,6) + "-" + phoneValue.slice(6,10);
+   }
+ }
+
+// validate phone number
+function validatePhoneNumber()
+ {
+   var phoneInput = document.getElementById("PhoneNumber");
+   var phoneValue = phoneInput.value;
+
+  if (phoneValue.length === 0) 
+     {
+        document.getElementById("PhoneNumber-error").innerHTML = 
+        "Phone number can NOT be blank";
+        return false;
+     }
+   
+  var phonePattern = /^\d{3}-\d{3}-\d{4}$/;
+  if (!phonePattern.test(phoneValue))
+     {
+        document.getElementById("PhoneNumber-error").innerHTML = 
+        "Enter a valid phone #";
+        return false;
+     }
+
+   else
+   {
+        document.getElementById("PhoneNumber-error").innerHTML = "";
+        return true;
+   }
+ }
+// regex pattern for phone # from stack overflow- https://stackoverflow.com/questions/8634139/phone-validation-regex and https://stackoverflow.com/questions/18028776/phone-number-regex-in-javascript-jquery-on-000000-0000 
+
+
+
+
